@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery</title>
+	<link rel="shotcut icon" href="#">
+	<style type="text/css">
+		.box {
+			width: 60%;
+			height: 200px;
+			border: 1px solid black;
+			margin: 30px;
+			padding: 10px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div class="box" id="box2">
+		<h4>Box2</h4>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+	</div>
+	<div class="box" id="box3">
+		<h4>Box3</h4>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+	</div>
+	<div class="box" id="box3">
+		<h4>Box4</h4>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+	</div>
+	<div class="box" id="box3">
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+			<li>li4</li>
+			<li>li5</li>
+			<li>li6</li>
+		</ul>
+	</div>
+	<div class="box" id="box1">
+		<h4>Box1</h4>
+		<p>1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+		<p>2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+		<p>3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+	</div>
+	<button class="class_click" id="id_click">Click me</button>
+</body>
+<script src="../jquery.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function() { // code jquery sẽ được viết ở trong này 
+		// Phương thức 1 : hide();
+		// $('#box2, #box3').hide();// ẩn 2 box cùng lúc
+		// Phương thức 2 : click(function(){
+		// })
+		// $('.class_click').click(function() { // khi click vào class có tên là 'class_click' thì ẩn box1 
+		// 	$('#box1').hide();
+		// })
+		// Phương thức 3 : selector();
+		$('#id_click').click(function() {
+			// $('div:first, div:last').hide(); ẩn 1 lúc 2 div đầu và cuối
+			// $('#box1 p:first, #box1 p:last').hide(); // ẩn 2 thẻ p của div 1
+			// cách chọn ẩn thành phần con 
+			// $('div ul li:nth-child(5)').hide();
+			// thuộc tính cho CSS 
+			// $('#box1').css('color', 'red');
+			// css có nhiều thuộc tính
+			// $('#box1').css({
+			// 	"color": "blue",
+			// 	"border": "3px solid black",
+			// 	"text-align": "center"
+			// })
+			
+
+
+			function scope() {
+				console.log(this, arguments.length);
+			}
+
+scope() // window, 0
+scope.call("foobar", [1,2]);  //==> "foobar", 1
+scope.apply("foobar", [1,2]); //==> "foobar", 2
+})
+
+
+
+
+	});
+</script>
+</html>
